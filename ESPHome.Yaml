@@ -1,0 +1,71 @@
+esphome:
+  name: jamie_desktop_switch
+
+esp8266:
+  board: nodemcuv2
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "ne7xjAVJzIX3IdlWMaKQqaWRqiz1Ck5gGZcWEX8KQRc="
+
+ota:
+  platform: esphome
+  password: "9dec9b96796240afb3572c0159a5a0ab"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Jamie_Desktop_Switch"
+    password: "ei3OQxkLGwi7"
+
+switch:
+  - platform: gpio
+    name: "Power Control"
+    icon: "mdi:electric-switch"
+    pin: D2
+    id: pc_power_control
+    inverted: no
+
+  - platform: gpio
+    name: "Reset Switch"
+    icon: "mdi:restart"
+    pin: D3
+    id: reset_switch
+    inverted: no
+    on_turn_on:
+      - logger.log: "Reset switch activated"
+      - switch.turn_off: reset_switch
+
+  # Template switch for short press
+  - platform: template
+    name: "Short Press"
+    icon: "mdi:gesture-tap"
+    turn_on_action:
+      - logger.log: "Short press activated"
+      - switch.turn_on: pc_power_control
+      - delay: 150ms
+      - switch.turn_off: pc_power_control
+
+  # Template switch for long press
+  - platform: template
+    name: "Long Press"
+    icon: "mdi:gesture-tap-hold"
+    turn_on_action:
+      - logger.log: "Long press activated"
+      - switch.turn_on: pc_power_control
+      - delay: 3500ms
+      - switch.turn_off: pc_power_control
+
+binary_sensor:
+  - platform: gpio
+    pin: D1   # Power detect input pin (readback from Power LED)
+    name: "PC Power State"
+    device_class: power
+
