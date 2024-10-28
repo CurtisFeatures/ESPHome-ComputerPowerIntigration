@@ -46,3 +46,6 @@ This configuration includes:
 - **Template Switches** that simulate short and long press actions for flexible power management.
 - **Binary Sensors** to monitor the PC’s power state.
 
+![Alt text](Schematic-ESPHome-ComputerPowerIntigration.png)
+
+![Alt text](PCB-ESPHome-ComputerPowerIntigration.png)
