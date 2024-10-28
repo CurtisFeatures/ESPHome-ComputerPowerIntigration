@@ -17,10 +17,9 @@ This **ESPHome** project enables remote control of a PC’s **power** and **rese
 
 ## Installation
 
-1. **Clone this repository**:
-   ```bash
-   git clone https://github.com/username/repo-name.git
-   cd repo-name
+1. **Download Files**:
+   - Download EPSHome.YAML
+     
 2. **Configure the ESPHome YAML file**:
    - Update Wi-Fi credentials in the `wifi` section.
    - Update the Device name 
