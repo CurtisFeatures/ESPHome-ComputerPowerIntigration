@@ -1,6 +1,5 @@
 # ESPHome-ComputerPowerIntigration
 
-# Jamie's Desktop ESPHome Switch
 
 This **ESPHome** project enables remote control of a PC’s **power** and **reset** functions using an **ESP8266 (NodeMCU)** board. With short and long press options for power management, this setup integrates seamlessly with **Home Assistant** for enhanced control.
 
