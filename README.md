@@ -47,6 +47,18 @@ This configuration includes:
 - **Template Switches** that simulate short and long press actions for flexible power management.
 - **Binary Sensors** to monitor the PC’s power state.
 
+  # Bill of Materials (BOM)
+
+| **Item**                                | **Description**                                                                                                               | **Quantity** |
+|-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|--------------|
+| **2-Pin 2.54mm Male Header Pins**       | Standard 2-pin male headers, 2.54mm pitch, suitable for breadboards or PCB connections. Each pin is 2.54mm apart.             | 7            |
+| **2N2222A NPN Transistor**              | General-purpose NPN transistor, suitable for switching and amplification in various circuits. **Max Voltage:** 40V, **Max Current:** 800mA. | 2            |
+| **1K Resistor**                         | Fixed resistor, **Value:** 1kΩ, **Tolerance:** ±5%, **Power Rating:** 0.25W or 0.125W.                                       | 2            |
+| **180Ω Resistor**                       | Fixed resistor, **Value:** 180Ω, **Tolerance:** ±5%, **Power Rating:** 0.25W or 0.125W.                                       | 1            |
+| **NodeMCU V3 ESP8266**                  | Development board with ESP8266 Wi-Fi module, suitable for IoT applications and compatible with the Arduino IDE. **Voltage:** 3.3V for I/O, **Input Voltage:** 5V via USB. | 1            |
+| **2-Pin Female-to-Female Dupont Cable** | Jumper wires with female connectors on each end, suitable for making connections on the NodeMCU board and peripherals. **Length:** Commonly 10-20cm. | 4            |
+
+
 ![Alt text](Schematic-ESPHome-ComputerPowerIntigration.png)
 
 ![Alt text](PCB-ESPHome-ComputerPowerIntigration.png)
