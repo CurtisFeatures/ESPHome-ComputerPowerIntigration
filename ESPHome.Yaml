@@ -60,7 +60,7 @@ switch:
     turn_on_action:
       - logger.log: "Long press activated"
       - switch.turn_on: pc_power_control
-      - delay: 3500ms
+      - delay: 5000ms
       - switch.turn_off: pc_power_control
 
 binary_sensor:
