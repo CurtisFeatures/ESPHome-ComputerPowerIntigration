@@ -14,6 +14,7 @@ This **ESPHome** project enables remote control of a PC’s **power** and **rese
 
 - **Hardware**: NodeMCU ESP8266 (Optional PCB)
 - **Software**: Home Assistant with ESPHome integration.
+- **Power**: Connect to a always on 5V and Ground header (such as USB) - Changes to your Bios may need to be made.
 
 ## Installation
 
